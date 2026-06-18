@@ -1,4 +1,257 @@
-/* 
-    Put your custom SCSS here! 
+/*
+    Put your custom SCSS here!
     This allows you to override any CollectionBuilder or Bootstrap CSS without modifying the base theme files directly.
 */
+
+:root {
+  --site-bg: #f5efe0;
+  --site-surface: #fbf7ea;
+  --site-surface-2: #eee3bd;
+  --site-border: #e3d6ad;
+  --site-text: #342a1f;
+  --site-muted: #65584d;
+  --site-accent: #6d7f5a;
+  --site-accent-2: #9b6a46;
+  --site-accent-3: #c8a66d;
+  --site-shadow: 0 8px 22px rgba(52, 42, 31, 0.05);
+  --display-font: "Overpass", "Segoe UI", sans-serif;
+  --body-font: "Overpass", "Segoe UI", sans-serif;
+}
+
+body {
+  background:
+    linear-gradient(180deg, #f7f1de 0%, #f1e6c9 100%);
+  color: var(--site-text);
+  font-family: var(--body-font);
+}
+
+main#maincontent {
+  padding-bottom: 4rem;
+}
+
+#home-banner {
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+#home-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(40, 31, 22, 0.58), rgba(40, 31, 22, 0.32)),
+    linear-gradient(180deg, rgba(110, 127, 79, 0.06), rgba(255, 255, 255, 0.02));
+  z-index: 1;
+}
+
+#home-banner::after {
+  content: "";
+  position: absolute;
+  inset: auto -6% -12% -6%;
+  height: 26%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent 62%);
+  z-index: 1;
+}
+
+#home-title-box {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+#home-title-box .p-2 {
+  background: linear-gradient(180deg, rgba(247, 241, 222, 0.92), rgba(231, 215, 170, 0.86));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--site-text);
+  max-width: 680px;
+  padding: 1.5rem 2rem !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+#home-title-box h1 {
+  font-family: var(--display-font);
+  font-size: clamp(3rem, 5vw, 4.75rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+#home-title-box p {
+  font-size: 1rem;
+  color: var(--site-muted);
+  max-width: 56ch;
+  margin-inline: auto;
+}
+
+.home-landing {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1.25rem 0 0;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+  align-items: stretch;
+}
+
+.home-hero__content,
+.home-hero__visual,
+.home-panel {
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: 0.9rem;
+  box-shadow: var(--site-shadow);
+}
+
+.home-hero__content {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.1rem, 2vw, 1.8rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.home-hero__eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--site-accent);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.home-hero__title {
+  font-family: var(--display-font);
+  font-size: clamp(2.5rem, 3.7vw, 3.8rem);
+  line-height: 0.98;
+  max-width: 13ch;
+  margin-bottom: 0.9rem;
+}
+
+.home-hero__text {
+  color: var(--site-muted);
+  font-size: 0.98rem;
+  max-width: 56ch;
+  margin-bottom: 1.2rem;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.home-hero__actions .btn {
+  border-radius: 999px;
+  padding: 0.68rem 0.95rem;
+}
+
+.home-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.home-hero__meta span {
+  background: var(--site-surface-2);
+  color: var(--site-text);
+  border: 1px solid var(--site-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.home-hero__visual {
+  overflow: hidden;
+  padding: 0.45rem;
+  background: transparent;
+  border: 1px solid var(--site-border);
+}
+
+.home-hero__visual #mini-map-9-1619 {
+  height: 100%;
+  min-height: 260px;
+  border-radius: 0.75rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1rem;
+}
+
+.home-grid__primary,
+.home-grid__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.home-panel {
+  padding: 0.95rem;
+  transition: none;
+}
+
+.home-panel:hover {
+  transform: none;
+  box-shadow: var(--site-shadow);
+}
+
+.home-panel--downloads {
+  margin-top: 1rem;
+}
+
+.home-panel .card,
+.home-panel .card-body {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.home-panel .card-title {
+  font-family: var(--display-font);
+  font-size: 1.45rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-panel .btn {
+  border-radius: 999px;
+}
+
+@media (max-width: 991px) {
+  .home-hero,
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__content,
+  .home-hero__visual {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-landing {
+    padding: 0.6rem 0 0;
+  }
+
+  .home-hero__content,
+  .home-panel {
+    padding: 1rem;
+  }
+
+  #home-title-box .p-2 {
+    padding: 1.5rem 1rem !important;
+  }
+}

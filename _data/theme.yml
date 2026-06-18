@@ -11,7 +11,7 @@
 featured-image: prr16
 featured-image-alt-text: # add alt text if using url for featured-image (objectid will be automatic from metadata)
 # optional: add extra padding above collection title for a larger image feature. 
-home-title-y-padding: 10em # the margin from the top your title portion will appear.
+home-title-y-padding: 4em # the margin from the top your title portion will appear.
 # optional: change position of background image, center, top, bottom
 home-banner-image-position: center # Default is center
 
@@ -71,8 +71,7 @@ year-nav-increment: 5 # set increments to auto gen nav years
 # 
 # add metadata fields for export in data downloads (tip: paste in first row of csv)
 # comma delimited list, reference url is automatic
-metadata-export-fields: "title,creator,date,description,subject,location,latitude,longitude,source,identifier,type,format,language,rights,display_template,object_location,image_small,image_thumb,image_alt_text,object_transcript
-"
+metadata-export-fields: "title,creator,date,description,subject,location,latitude,longitude,source,source_link,identifier,type,format,language,rights,display_template,object_location,image_small,image_thumb,image_alt_text,object_transcript"
 # generate a facets list for given fields, comma delimited
 metadata-facets-fields: "subject,creator,format"
 
@@ -112,8 +111,8 @@ bootswatch: cosmo
 base-font-size: 1.2em
 text-color: "#191919"
 link-color: "#0d6efd"
-base-font-family: # comment out for bootstrap defaults. e.g. Roboto
-font-cdn: # add font stylesheet, e.g. <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+base-font-family: "Overpass, Manrope, Segoe UI, sans-serif"
+font-cdn: '<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&family=Railroad+Gothic+CC:wght@400;700&family=Old+Standard+TT:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">'
 
 # THEME ICONS [optional!]
 # default icons can be overridden or new icons can be added using "icons" object

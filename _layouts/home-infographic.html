@@ -2,29 +2,36 @@
 # Default home page with boxes providing collection stats
 layout: page
 ---
-<div class="row">
+<div class="home-landing">
+  <section class="home-hero">
+    <div class="home-hero__content">
+      <p class="home-hero__eyebrow">Panama Railroad Collection</p>
+      <h1 class="home-hero__title">Tracing the line that changed the isthmus.</h1>
+      <p class="home-hero__text">Browse photographs, maps, and documents that capture the engineering ambition, labor, and daily life tied to the railroad’s remarkable history.</p>
+      <div class="home-hero__actions">
+        <a class="btn btn-primary" href="{{ '/browse.html' | relative_url }}">Browse collection</a>
+        <a class="btn btn-outline-secondary" href="{{ '/map.html' | relative_url }}">Explore map</a>
+      </div>
+    </div>
+    <div class="home-hero__visual">
+      {% include feature/mini-map.html latitude="9.1619" longitude="-79.6165" basemap="Esri_NatGeoWorldMap" map-link="true" objectid="prr15" map-zoom="9.5" %}
+    </div>
+  </section>
 
-  <div class="col-md-8">
+  <section class="home-grid">
+    <div class="home-grid__primary">
+      <div class="home-panel home-panel--carousel">
+        {% include index/carousel.html title="Featured Items" %}
+      </div>
+    </div>
 
-    {% include index/description.html %}
-    {% include index/carousel.html title="Sample Items" %}
-    
-  </div>
-  <div class="col-md-4">  
+    <aside class="home-grid__sidebar">
+      {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
+      {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" max="20" %}
+    </aside>
+  </section>
 
-    {% include index/time.html %}
-
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
-
-    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %}
-    
-    {% include index/content.html %}
-
-  </div>
-  <div class="col-md-12">
-
+  <section class="home-panel home-panel--downloads">
     {% include index/data-download.html %}
-
-  </div>
-
+  </section>
 </div>
